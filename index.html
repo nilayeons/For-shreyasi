@@ -5,194 +5,400 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>For Shreyasi ❤️</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: 'Segoe UI', sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
-    background: linear-gradient(135deg,#0f0f0f,#1f1f1f);
-    color:white;
-    overflow-x:hidden;
+background:linear-gradient(135deg,#090909,#1a0f13,#2b0f16);
+color:white;
+overflow-x:hidden;
 }
 
-.hero{
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:20px;
-}
-
-.hero h1{
-    font-size:3rem;
-    color:#ff4d6d;
-}
-
-.hero p{
-    margin-top:15px;
-    font-size:1.2rem;
-    max-width:700px;
+.hearts{
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+pointer-events:none;
+z-index:-1;
 }
 
 .heart{
-    font-size:60px;
-    animation:beat 1s infinite;
+position:absolute;
+color:rgba(255,80,120,.25);
+font-size:22px;
+animation:float 10s linear infinite;
 }
 
-@keyframes beat{
-    50%{
-        transform:scale(1.2);
-    }
+@keyframes float{
+from{
+transform:translateY(100vh);
+}
+to{
+transform:translateY(-100px);
+}
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:30px;
+}
+
+.hero-content{
+max-width:850px;
+}
+
+.hero h1{
+font-size:4rem;
+color:#ff5e8a;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:1.3rem;
+line-height:1.8;
+color:#f1d9df;
+}
+
+.glow{
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{
+text-shadow:0 0 10px #ff5e8a;
+}
+to{
+text-shadow:0 0 30px #ff5e8a;
+}
 }
 
 .section{
-    padding:60px 20px;
-    max-width:1000px;
-    margin:auto;
+max-width:1000px;
+margin:auto;
+padding:90px 25px;
 }
 
-.section h2{
-    color:#ff4d6d;
-    margin-bottom:20px;
-    text-align:center;
-}
-
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:20px;
-}
-
-.gallery img{
-    width:100%;
-    border-radius:20px;
-    box-shadow:0 0 20px rgba(255,77,109,.3);
+.title{
+text-align:center;
+font-size:2.3rem;
+color:#ff6d96;
+margin-bottom:40px;
 }
 
 .card{
-    background:rgba(255,255,255,.05);
-    padding:25px;
-    border-radius:20px;
-    margin-bottom:20px;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(10px);
+padding:30px;
+border-radius:25px;
+margin-bottom:25px;
+border:1px solid rgba(255,255,255,.08);
+transition:.4s;
 }
 
-.footer{
-    text-align:center;
-    padding:50px 20px;
+.card:hover{
+transform:translateY(-8px);
 }
 
-button{
-    padding:12px 25px;
-    border:none;
-    border-radius:30px;
-    background:#ff4d6d;
-    color:white;
-    cursor:pointer;
-    font-size:16px;
+.timeline-item{
+margin-bottom:25px;
+padding-left:20px;
+border-left:3px solid #ff5e8a;
 }
 
-#message{
-    margin-top:20px;
-    font-size:20px;
-    color:#ffd6de;
+.timeline-item h3{
+color:#ff7fa6;
+margin-bottom:5px;
 }
+
+.letter{
+font-size:1.1rem;
+line-height:2;
+color:#f4e4e8;
+}
+
+.center{
+text-align:center;
+}
+
+.btn{
+background:#ff5e8a;
+color:white;
+border:none;
+padding:15px 30px;
+font-size:16px;
+border-radius:40px;
+cursor:pointer;
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.08);
+}
+
+.hidden{
+display:none;
+margin-top:25px;
+}
+
+.final{
+text-align:center;
+padding:100px 20px;
+}
+
+.final h1{
+font-size:3.5rem;
+color:#ff6b93;
+}
+
+.final p{
+margin-top:20px;
+font-size:1.2rem;
+color:#f5dce2;
+}
+
+footer{
+padding:40px;
+text-align:center;
+color:#999;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.8rem;
+}
+
+.title{
+font-size:1.8rem;
+}
+
+.final h1{
+font-size:2.4rem;
+}
+
+}
+
 </style>
 </head>
+
 <body>
 
+<div class="hearts" id="hearts"></div>
+
 <section class="hero">
-    <div class="heart">❤️</div>
+<div class="hero-content">
 
-    <h1>Nilay & Shreyasi</h1>
+<h1 class="glow">Shreyasi ❤️</h1>
 
-    <p>
-        6 months may sound small to the world,
-        but to me it holds countless smiles,
-        comfort, memories and feelings.
-    </p>
+<p>
+Some people enter our life unexpectedly,
+and quietly become the most beautiful part of it.
+<br><br>
+These six months may look small on a calendar,
+but for me they hold countless emotions,
+memories, comfort and happiness.
+</p>
+
+</div>
 </section>
 
 <section class="section">
-    <h2>Our Memories</h2>
 
-    <div class="card">
-        🌸 Our first hug during admission time...
-        I still remember that moment.
-        It felt like all the pressure,
-        uncertainty and anxiety disappeared for a while.
-        It was a relief I never expected.
-    </div>
+<h2 class="title">🌷 Our Story So Far</h2>
 
-    <div class="card">
-        🌸 Every conversation with you became a part of my day.
-    </div>
+<div class="card timeline-item">
+<h3>The Beginning</h3>
+<p>A simple conversation slowly became something special.</p>
+</div>
 
-    <div class="card">
-        🌸 Every little memory with you feels special because it is with you.
-    </div>
+<div class="card timeline-item">
+<h3>Admission Days</h3>
+<p>Stress, uncertainty and countless thoughts filled the day.</p>
+</div>
+
+<div class="card timeline-item">
+<h3>Our First Hug 🤍</h3>
+<p>
+The moment I'll probably remember for a very long time.
+For others it may have been a small moment,
+but for me it felt like peace in the middle of chaos.
+</p>
+</div>
+
+<div class="card timeline-item">
+<h3>6 Beautiful Months ❤️</h3>
+<p>
+A collection of smiles, conversations,
+care and memories that became important to me.
+</p>
+</div>
+
 </section>
 
 <section class="section">
-    <h2>Our Photos</h2>
 
-    <div class="gallery">
-        <img src="photo1.jpg">
-        <img src="photo2.jpg">
-    </div>
+<h2 class="title">💌 A Letter For You</h2>
+
+<div class="card letter">
+
+Dear Shreyasi,
+
+<br><br>
+
+Sometimes I wonder how someone can become so important
+in such a short period of time.
+
+<br><br>
+
+Before you,
+days were simply days.
+
+After you,
+they started carrying memories.
+
+<br><br>
+
+I still remember our first hug during admission time.
+
+Maybe the world would see it as an ordinary moment.
+
+But for me,
+it felt like finding comfort when everything felt uncertain.
+
+<br><br>
+
+Thank you for every smile.
+
+Thank you for every conversation.
+
+Thank you for every little moment that unknowingly became special.
+
+<br><br>
+
+I don't know what the future has written for us.
+
+But I know that meeting you became one of the most beautiful chapters of my life.
+
+<br><br>
+
+And if one day you ever wonder what place you hold in my heart,
+
+the answer will always remain the same:
+
+A very special one.
+
+<br><br>
+
+I love you.
+
+<br><br>
+
+— Nilay ❤️
+
+</div>
+
 </section>
 
 <section class="section">
-    <h2>A Letter For You</h2>
 
-    <div class="card">
-        Dear Shreyasi,
+<h2 class="title">✨ Things I Love About You</h2>
 
-        <br><br>
+<div class="card">💖 Your smile</div>
+<div class="card">💖 Your kindness</div>
+<div class="card">💖 The comfort I feel around you</div>
+<div class="card">💖 The way ordinary moments become special</div>
+<div class="card">💖 Simply... You</div>
 
-        Sometimes I wonder how someone can become so important
-        in such a short time.
-
-        These six months have given me countless reasons to smile.
-        Whenever life feels heavy, thoughts of you somehow make it lighter.
-
-        I don't know what the future holds,
-        but I know that meeting you was one of the most beautiful things
-        that happened in my life.
-
-        Thank you for your kindness,
-        your presence,
-        your patience,
-        and for being yourself.
-
-        <br><br>
-
-        I love you.
-
-        <br><br>
-
-        — Nilay ❤️
-    </div>
 </section>
 
-<section class="footer">
-    <button onclick="showMessage()">
-        Click Me ❤️
-    </button>
+<section class="section center">
 
-    <div id="message"></div>
+<h2 class="title">🔒 A Secret Message</h2>
+
+<button class="btn" onclick="showSecret()">
+Open Only If You Are Shreyasi ❤️
+</button>
+
+<div id="secret" class="hidden card">
+
+"If life gave me a thousand choices,
+I would still choose the girl who unknowingly became my comfort during one of the most stressful moments of my life."
+
+<br><br>
+
+❤️
+
+</div>
+
 </section>
+
+<section class="final">
+
+<h1>Nilay ❤️ Shreyasi</h1>
+
+<p>
+
+No matter where life takes us,
+
+<br><br>
+
+you will always be one of the most beautiful memories,
+and one of the most special people in my story.
+
+</p>
+
+</section>
+
+<footer>
+Made with ❤️ by Nilay
+</footer>
 
 <script>
-function showMessage(){
-    document.getElementById("message").innerHTML =
-    "No matter how many days pass, you will always have a special place in my heart. ❤️";
+
+function showSecret(){
+document.getElementById("secret").style.display="block";
 }
+
+const hearts=document.getElementById("hearts");
+
+for(let i=0;i<30;i++){
+
+let heart=document.createElement("div");
+
+heart.classList.add("heart");
+
+heart.innerHTML="❤";
+
+heart.style.left=Math.random()*100+"%";
+
+heart.style.animationDuration=
+(6+Math.random()*8)+"s";
+
+heart.style.fontSize=
+(15+Math.random()*25)+"px";
+
+hearts.appendChild(heart);
+
+}
+
 </script>
 
 </body>
